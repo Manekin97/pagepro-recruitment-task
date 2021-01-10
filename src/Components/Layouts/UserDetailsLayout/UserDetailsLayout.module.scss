@@ -1,0 +1,19 @@
+@import '../../../index.scss';
+
+.container {
+	padding: 32px 64px;
+	min-height: calc(100vh - 80px);
+	@include fullWidthWithScrollY();
+
+	@media screen and (max-width: 476px) {
+		padding: 32px;
+	}
+
+	@media screen and (max-width: 384px) {
+		padding: 16px;
+	}
+
+	@media screen and (max-width: 340px) {
+		padding: 0;
+	}
+}

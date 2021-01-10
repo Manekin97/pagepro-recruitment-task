@@ -1,0 +1,59 @@
+$default-text-color: #dfe4eb;
+$default-background: #294e87;
+$default-hover-background: #1148ad;
+
+$inverse-text-color: $default-background;
+$inverse-background: $default-text-color;
+$inverse-hover-background: #becbe8;
+
+.button {
+	outline: none;
+	background-color: transparent;
+	border: none;
+
+	position: relative;
+	cursor: pointer;
+	font-size: 1.5rem;
+	line-height: 2rem;
+	padding: 0.25em 1em;
+	border-radius: 10px;
+
+	transition: background-color 250ms, box-shadow 125ms ease-in;
+
+	&:hover,
+	&:focus,
+	&:active {
+		transition: background-color 250ms, box-shadow 125ms ease-out;
+		outline: none;
+	}
+
+	&.default {
+		background-color: $default-background;
+		color: $default-text-color;
+
+		&:hover,
+		&:focus {
+			background-color: $default-hover-background;
+			box-shadow: 0 0 4px $default-hover-background;
+		}
+
+		&:active {
+			box-shadow: 0 0 12px $default-hover-background;
+		}
+	}
+
+	&.inverse {
+		background-color: $inverse-background;
+		color: $inverse-text-color;
+
+		&:hover,
+		&:focus {
+			background-color: $inverse-hover-background;
+			box-shadow: 0 0 4px $inverse-hover-background;
+		}
+
+		&:active {
+			box-shadow: 0 0 12px $inverse-hover-background;
+		}
+	}
+}

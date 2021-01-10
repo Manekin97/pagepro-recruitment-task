@@ -1,0 +1,23 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-color: #152238;
+}
+
+body,
+html {
+	height: 100%;
+}
+
+/*
+	Fixes an issue where centered content
+	(inside of a full width container)
+	shifts when Y scroll appears.
+*/
+@mixin fullWidthWithScrollY {
+	margin-right: calc(-1 * (100vw - 100%));
+}

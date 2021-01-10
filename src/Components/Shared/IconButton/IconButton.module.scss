@@ -1,0 +1,24 @@
+.button {
+	outline: none;
+	border: none;
+	height: 48px;
+	background-color: transparent;
+
+	cursor: pointer;
+	transition: transform 125ms ease-in;
+
+	&:hover,
+	&:focus {
+		transform: scale(1.05);
+		transition: transform 125ms ease-out;
+	}
+
+	&:active {
+		transform: scale(0.95);
+		transition: transform 60ms ease-out;
+	}
+
+	.icon {
+		height: 100%;
+	}
+}

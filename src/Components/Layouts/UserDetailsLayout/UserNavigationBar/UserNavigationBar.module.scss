@@ -1,0 +1,21 @@
+@import '../../../../index.scss';
+
+.nav {
+	position: sticky;
+	top: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 2;
+
+	min-height: 80px;
+	padding: 0 2em;
+	box-shadow: 0 -3px 7px 5px #294e87;
+	@include fullWidthWithScrollY();
+
+	.actionButton {
+		width: 48px;
+	}
+}

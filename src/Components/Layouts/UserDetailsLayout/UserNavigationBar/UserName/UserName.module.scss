@@ -1,0 +1,12 @@
+.name {
+	text-align: center;
+	width: 80%;
+	font-size: 2rem;
+	line-height: 2.5rem;
+	padding: 0 1em;
+	color: #dfe4eb;
+
+	@media screen and (max-width: 476px) {
+		word-break: break-all;
+	}
+}

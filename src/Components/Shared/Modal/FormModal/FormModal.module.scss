@@ -1,0 +1,30 @@
+.container {
+	padding: 0 2em;
+	border-radius: 10px;
+
+	.header {
+		text-align: center;
+		padding: 2em 0 1em 0;
+
+		.title {
+			font-size: 2rem;
+			line-height: 2.5rem;
+			color: #dfe4eb;
+		}
+	}
+
+	.footer {
+		padding: 1em 0;
+		display: flex;
+		justify-content: flex-end;
+
+		.button,
+		.submit {
+			width: 130px;
+		}
+
+		.submit {
+			margin-left: 1em;
+		}
+	}
+}

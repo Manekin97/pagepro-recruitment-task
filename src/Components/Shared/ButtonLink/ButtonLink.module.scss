@@ -1,0 +1,32 @@
+$background-color: #294e87;
+$hover-color: #1148ad;
+
+.link {
+	color: #dfe4eb;
+	background-color: $background-color;
+	font-size: 1.5rem;
+	line-height: 2rem;
+	padding: 0.5em 1em;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+	border-radius: 10px;
+	transition: background-color 250ms, box-shadow 125ms ease-in;
+
+	&:hover,
+	&:focus,
+	&:active {
+		transition: background-color 250ms, box-shadow 125ms ease-out;
+		outline: none;
+	}
+
+	&:hover,
+	&:focus {
+		background-color: $hover-color;
+		box-shadow: 0 0 4px $hover-color;
+	}
+
+	&:active {
+		box-shadow: 0 0 12px $hover-color;
+	}
+}

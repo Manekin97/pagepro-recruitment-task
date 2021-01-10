@@ -1,0 +1,13 @@
+.users {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+
+	column-gap: 3rem;
+	row-gap: 2rem;
+
+	list-style: none;
+
+	@media screen and (max-width: 478px) {
+		grid-template-columns: auto;
+	}
+}

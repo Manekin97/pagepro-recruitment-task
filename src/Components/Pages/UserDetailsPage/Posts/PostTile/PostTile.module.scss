@@ -1,0 +1,34 @@
+.tile {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border: 1px solid #294e87;
+	border-radius: 10px;
+	padding: 0.5em 1em;
+	font-size: 1.25rem;
+	line-height: 1.5rem;
+	color: #dfe4eb;
+	height: 80px;
+	width: 100%;
+
+	&:not(:first-child) {
+		margin-top: 16px;
+	}
+
+	.wrapper {
+		display: flex;
+		align-items: center;
+		max-width: calc(80% - 40px - 2em);
+
+		.title {
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			overflow: hidden;
+			padding-left: 1.5em;
+		}
+	}
+
+	.caret {
+		height: 48px;
+	}
+}

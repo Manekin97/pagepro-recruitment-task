@@ -1,0 +1,11 @@
+.message {
+	font-size: 0.875rem;
+	line-height: 1.25rem;
+	font-style: normal;
+	color: #ff4b2a;
+	padding-top: 0.5em;
+
+	&::first-letter {
+		text-transform: capitalize;
+	}
+}

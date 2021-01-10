@@ -1,26 +1,49 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { ApolloProvider } from '@apollo/client';
+import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
+import { UserDetailsLayout } from './Components/Layouts';
+import { HomePage, PostDetailsPage, UserDetailsPage } from './Components/Pages';
+import createApolloClient from './Graphql/client';
+import { routes } from './Helpers';
+import BaseLayout from './Components/Layouts/BaseLayout/BaseLayout';
+import { SkeletonTheme } from 'react-loading-skeleton';
+
+const client = createApolloClient();
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<ApolloProvider client={client}>
+			<SkeletonTheme color='#294e87' highlightColor='#becbe8'>
+				<BrowserRouter>
+					<Switch>
+						<Route path={routes.users}>
+							<UserDetailsLayout>
+								<Switch>
+									<Route exact path={routes.userDetails}>
+										<UserDetailsPage />
+									</Route>
+
+									<Route exact path={routes.postDetails}>
+										<PostDetailsPage />
+									</Route>
+
+									<Redirect from={routes.users} to={routes.homepage} />
+								</Switch>
+							</UserDetailsLayout>
+						</Route>
+
+						<Route exact path={routes.homepage}>
+							<BaseLayout>
+								<HomePage />
+							</BaseLayout>
+						</Route>
+
+						<Redirect to={routes.homepage} />
+					</Switch>
+				</BrowserRouter>
+			</SkeletonTheme>
+		</ApolloProvider>
+	);
 }
 
 export default App;

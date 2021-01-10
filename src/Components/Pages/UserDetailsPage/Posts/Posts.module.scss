@@ -1,0 +1,10 @@
+.posts {
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	padding-top: 32px;
+
+	span:not(:first-of-type) > .skeleton {
+		margin-top: 16px;
+	}
+}

@@ -1,0 +1,84 @@
+@import '../../../index.scss';
+
+.modal {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+	z-index: 3;
+
+	&.enter {
+		display: block;
+		opacity: 0;
+	}
+
+	&.enterActive {
+		display: block;
+		opacity: 1;
+		transition: opacity 300ms ease-in-out;
+	}
+
+	&.enterDone {
+		display: block;
+		opacity: 1;
+	}
+
+	&.exit {
+		display: block;
+		opacity: 1;
+	}
+
+	&.exitActive {
+		display: block;
+		opacity: 0;
+		transition: opacity 300ms ease-in-out;
+	}
+
+	.modalBody {
+		display: none;
+		position: fixed;
+		height: auto;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		border-radius: 18px;
+		box-shadow: 0px 0px 90px rgba(0, 0, 0, 0.1);
+		animation-fill-mode: backwards;
+		transition: margin 250ms ease-in-out;
+
+		&.bodyEnter {
+			display: block;
+			opacity: 0;
+		}
+
+		&.bodyEnterActive {
+			display: block;
+			opacity: 1;
+			transition: opacity 200ms ease-in-out;
+		}
+
+		&.bodyEnterDone {
+			display: block;
+			opacity: 1;
+		}
+
+		&.bodyExit {
+			display: block;
+			opacity: 1;
+		}
+
+		&.bodyExitActive {
+			display: block;
+			opacity: 0;
+			transition: opacity 200ms ease-in-out;
+		}
+
+		.header {
+			display: flex;
+			justify-content: flex-end;
+		}
+	}
+}

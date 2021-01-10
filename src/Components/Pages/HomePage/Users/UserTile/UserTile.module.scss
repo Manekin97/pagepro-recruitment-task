@@ -1,0 +1,51 @@
+.tile {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	border: 1px solid #294e87;
+	border-radius: 10px;
+	padding: 1em;
+	font-size: 1.25rem;
+	line-height: 1.5rem;
+	color: #dfe4eb;
+	height: 325px;
+
+	@media screen and (max-width: 478px) {
+		height: auto;
+	}
+
+	.name {
+		font-size: 2rem;
+		line-height: 2.5rem;
+		text-align: center;
+		padding-bottom: 0.5em;
+		box-sizing: content-box;
+
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+
+		@media screen and (max-width: 478px) {
+			overflow: initial;
+			white-space: initial;
+			word-break: break-all;
+		}
+	}
+
+	.companyName {
+		font-size: 1.25rem;
+		line-height: 1.5rem;
+		padding-bottom: 0.5em;
+	}
+
+	@media screen and (max-width: 478px) {
+		.link {
+			margin-top: 1.5rem;
+		}
+
+		.catchPhrase,
+		.companyName {
+			word-break: break-all;
+		}
+	}
+}
